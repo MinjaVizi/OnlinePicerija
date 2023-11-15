@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skroz dobra Pizza - Poručivanje</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <img src="images/pizza-naslovna.jpg" alt="pozadina" class="background-image">
+
+    <header>
+        <img src="images/pizza-logo.jpg" alt="Logo">
+        <nav>
+            <a href="Index.html">Početna</a>
+            <a href="Meni.html">Meni</a>
+            <a href="Poručivanje.html">Poručivanje</a>
+            <a href="KakoDoNas.html">Kako do nas</a>
+        </nav>
+    </header>
+    <main>
+        <form class="order-form" id="orderForm">
+            <div class="form-section">
+                <label for="name">Ime</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-section">
+                <label for="surname">Prezime</label>
+                <input type="text" id="surname" name="surname" required>
+            </div>
+            <div class="form-section">
+                <label for="address">Adresa</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-section">
+                <label for="phone">Kontakt telefon</label>
+                <input type="tel" id="phone" name="phone" pattern="\d*" title="Unesite samo brojeve." required>
+            </div>
+            <div class="form-section">
+                <label for="pizza">Odaberite pizzu</label>
+                <select id="pizza" name="pizza" required>
+                    <option value="Margarita">Margarita</option>
+                    <option value="Kaprićoza">Kaprićoza</option>
+                    <option value="Vesuvio">Vesuvio</option>
+                    <option value="Vegetarijana (posno)">Vegetarijana (posno)</option>
+                    <option value="Tonno (posno)">Tonno (posno)</option>
+                    <option value="Paragina">Paragina</option>
+                    <option value="Grčka">Grčka</option>
+                    <option value="Romana">Romana</option>
+                    <option value="Quattro formaggio">Quattro formaggio</option>
+                    <option value="Speciale">Speciale</option>
+                </select>
+            </div>
+            <div class="form-section">
+                <label>Veličina pice</label>
+                <div id="sizeSelector" class="size-selector">
+                    <button type="button" class="size-option" onclick="selectSize('M')">M</button>
+                    <button type="button" class="size-option" onclick="selectSize('L')">L</button>
+                    <button type="button" class="size-option" onclick="selectSize('XL')">XL</button>
+                    <button type="button" class="size-option" onclick="selectSize('XXL')">XXL</button>
+                </div>
+            </div>
+            <div class="form-section">
+                <button type="button" id="addPizzaBtn">Dodaj picu</button>
+            </div>
+            <div id="selectedPizzas"></div>
+            <button type="submit" id="orderBtn">Poruči</button>
+        </form>
+
+    </main>
+    <footer>
+        <p class="copyright">© 2023 Sva prava zadržana.</p>
+    </footer>
+
+    <script src="JS/main.js"></script>
+
+</body>
+</html>
